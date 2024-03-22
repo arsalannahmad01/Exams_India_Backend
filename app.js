@@ -1,5 +1,8 @@
 require('dotenv').config()
+require('express-async-errors');
+const cors = require('cors')
 const express = require('express')
+const {rateLimit} = require('express-rate-limit')
 const app = express()
 const connectDB = require('./db/connect')
 const orcrRouter = require('./routes/orcr')
@@ -7,10 +10,20 @@ const errorHandlerMiddleware = require('./middleware/error-handler')
 
 app.use(express.json())
 
-app.use(errorHandlerMiddleware)
+app.use(cors())
+
+const limiter = rateLimit({
+	windowMs:  60 * 1000, 
+	limit: 5, 
+	standardHeaders: 'draft-7', 
+	legacyHeaders: false, 
+	
+})
 
 app.get('/elb-check', (req, res) => res.send('hello world!'));
-app.use('/api/v1/orcr', orcrRouter)
+app.use('/api/v1/orcr', limiter, orcrRouter)
+
+app.use(errorHandlerMiddleware)
 
 const port = process.env.PORT || 5000
 

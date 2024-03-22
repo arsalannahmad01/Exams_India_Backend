@@ -1,4 +1,4 @@
-// const Sentry = require('../utils/sentry');
+const Sentry = require('../sentry');
 
 const { StatusCodes } = require("http-status-codes");
 const errorHandlerMiddleware = (err, req, res, next) => {
@@ -25,7 +25,7 @@ const errorHandlerMiddleware = (err, req, res, next) => {
     customError.statusCode = 404;
   }
 
-  // Sentry.captureException(err);
+  Sentry.captureException(err);
   return res.status(customError.statusCode).json({ message: customError.msg });
 };
 

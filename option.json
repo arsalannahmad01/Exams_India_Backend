@@ -1,0 +1,440 @@
+{
+    "Institutes": [
+        {
+            "name": "Assam University, Silchar",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "Birla Institute of Technology, Mesra, Ranchi",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "Gurukula Kangri Vishwavidyalaya, Haridwar",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "Indian Institute of Carpet Technology, Bhadohi",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "Institute of Infrastructure, Technology, Research and Management-Ahmedabad",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "Institute of Technology, Guru Ghasidas Vishwavidyalaya (A Central University), Bilaspur, (C.G.)",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "J.K. Institute of Applied Physics & Technology, Department of Electronics & Communication, University of Allahabad- Allahabad",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "National Institute of Electronics and Information Technology, Aurangabad (Maharashtra)",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "National Institute of Advanced Manufacturing Technology, Ranchi",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "Sant Longowal Institute of Engineering and Technology",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "Mizoram University, Aizawl",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "School of Engineering, Tezpur University, Napaam, Tezpur",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "School of Planning & Architecture, Bhopal",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "School of Planning & Architecture, New Delhi",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "School of Planning & Architecture: Vijayawada",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "Shri Mata Vaishno Devi University, Katra, Jammu & Kashmir",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "International Institute of Information Technology, Naya Raipur",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "University of Hyderabad",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "Punjab Engineering College, Chandigarh",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "Jawaharlal Nehru University, Delhi",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "International Institute of Information Technology, Bhubaneswar",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "Central institute of Technology Kokrajar, Assam",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "Puducherry Technological University, Puducherry",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "Ghani Khan Choudhary Institute of Engineering and Technology, Malda, West Bengal",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "Central University of Rajasthan, Rajasthan",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "National Institute of Food Technology Entrepreneurship and Management, Sonepat, Haryana",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "National Institute of Food Technology, Entrepreneurship and Management (NIFTEM) - Thanjavur",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "North Eastern Regional Institute of Science and Technology, Nirjuli-791109 (Itanagar),Arunachal Pradesh",
+            "type": "Government Funded Technical Institutions"
+        },
+        {
+            "name": "Indian Institute of Technology Bhubaneswar",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Technology Bombay",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Technology Mandi",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Technology Delhi",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Technology Indore",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Technology Kharagpur",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Technology Hyderabad",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Technology Jodhpur",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Technology Kanpur",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Technology Madras",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Technology Gandhinagar",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Technology Patna",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Technology Roorkee",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Technology (ISM) Dhanbad",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Technology Ropar",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Technology (BHU) Varanasi",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Technology Guwahati",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Technology Bhilai",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Technology Goa",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Technology Palakkad",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Technology Tirupati",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Technology Jammu",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Technology Dharwad",
+            "type": "Indian Institute of Technology"
+        },
+        {
+            "name": "Atal Bihari Vajpayee Indian Institute of Information Technology & Management Gwalior",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology (IIIT)Kota, Rajasthan",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology Guwahati",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology(IIIT) Kalyani, West Bengal",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology(IIIT) Kilohrad, Sonepat, Haryana",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology(IIIT) Una, Himachal Pradesh",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology (IIIT), Sri City, Chittoor",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology(IIIT), Vadodara, Gujrat",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology, Allahabad",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology, Design & Manufacturing, Kancheepuram",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Pt. Dwarka Prasad Mishra Indian Institute of Information Technology, Design & Manufacture Jabalpur",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology Manipur",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology Tiruchirappalli",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology Lucknow",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology(IIIT) Dharwad",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology Design & Manufacturing Kurnool, Andhra Pradesh",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology(IIIT) Kottayam",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology (IIIT) Ranchi",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology (IIIT) Nagpur",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology (IIIT) Pune",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology Bhagalpur",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology Bhopal",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology Surat",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology, Agartala",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian institute of information technology, Raichur, Karnataka",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Indian Institute of Information Technology, Vadodara International Campus Diu (IIITVICD)",
+            "type": "Indian Institute of Information Technology"
+        },
+        {
+            "name": "Dr. B R Ambedkar National Institute of Technology, Jalandhar",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "Malaviya National Institute of Technology Jaipur",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "Maulana Azad National Institute of Technology Bhopal",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "Motilal Nehru National Institute of Technology Allahabad",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology Agartala",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology Calicut",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology Delhi",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology Durgapur",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology Goa",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology Hamirpur",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology Karnataka, Surathkal",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology Meghalaya",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology Nagaland",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology Patna",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology Puducherry",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology Raipur",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology Sikkim",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology Arunachal Pradesh",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology, Jamshedpur",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology, Kurukshetra",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology, Manipur",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology, Mizoram",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology, Rourkela",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology, Silchar",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology, Srinagar",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology, Tiruchirappalli",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology, Uttarakhand",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology, Warangal",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "Sardar Vallabhbhai National Institute of Technology, Surat",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "Visvesvaraya National Institute of Technology, Nagpur",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "National Institute of Technology, Andhra Pradesh",
+            "type": "National Institute of Technology"
+        },
+        {
+            "name": "Indian Institute of Engineering Science and Technology, Shibpur",
+            "type": "National Institute of Technology"
+        }
+    ]
+}
