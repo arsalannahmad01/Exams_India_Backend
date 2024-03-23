@@ -21,7 +21,7 @@ const limiter = rateLimit({
 })
 
 app.get('/elb-check', (req, res) => res.send('hello world!'));
-app.use('/api/v1/orcr', limiter, orcrRouter)
+app.use('/api/v1', limiter, orcrRouter)
 
 app.use(errorHandlerMiddleware)
 

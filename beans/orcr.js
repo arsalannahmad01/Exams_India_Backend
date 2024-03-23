@@ -1,22 +1,45 @@
 const Orcr = require('../models/Orcr')
+const { BadRequestError } = require('../errors')
 
 const getOpeningClosingRanks = async(req, res) => {
+    try {
+        const { pageNumber = 1, pageSize = 50 } = req.query;
+
+        if (pageSize > 100) throw new BadRequestError("Page size can not exceed 100!");
+
+        const matchQuery = buildAggregateQuery(req);
+        
+        const data = (await Orcr.aggregate([
+            { $match: matchQuery },
+            {
+                $facet: {
+                    orcr: [
+                        { $match: {  } },
+                        { $skip: (pageNumber - 1) * pageSize },
+                        { $limit: pageSize },
+                    ],
+                }
+            }
+        ]))[0];
     
-    const data = await Orcr.find(req.body)
+        res.json({ success: true, message: "Opening closing ranks fetched successfully!", data });
+    } catch (err) {
+        console.log({ message: "An error occured", stacktrace: err.stacktrace });
+        throw err;
+    }
+}
 
-    res.json(data)
+const buildAggregateQuery = (req) => {
+    const { round, seatType, year, branchCode, instituteCode } = req.query;
 
-    // const body = req.body
+    let matchQuery = {};
+    if (branchCode) matchQuery.branchCode = branchCode;
+    if (instituteCode) matchQuery.instituteCode = instituteCode;
+    if (year) matchQuery.year = parseInt(year);
+    if (seatType) matchQuery.seatType = seatType;
+    if (round) matchQuery.round = parseInt(round);
 
-    // // const data = body.split(':,')
-
-    
-
-    // const searchQuery = { $and: keywords.map(keyword => ({ $text: { $search: keyword } })) };
-    //     // Perform search query based on multiple keywords
-    //     const products = await Orcr.find(searchQuery);
-    //     res.json(products);
-
+    return matchQuery;
 }
 
 module.exports = {getOpeningClosingRanks}

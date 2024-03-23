@@ -26,7 +26,7 @@ const errorHandlerMiddleware = (err, req, res, next) => {
   }
 
   Sentry.captureException(err);
-  return res.status(customError.statusCode).json({ message: customError.msg });
+  return res.status(customError.statusCode).json({ success: false, message: customError.msg });
 };
 
 module.exports = errorHandlerMiddleware;

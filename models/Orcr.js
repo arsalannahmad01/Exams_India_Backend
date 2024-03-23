@@ -1,34 +1,34 @@
 const mongoose = require('mongoose')
 
 const OrcrSchema = new mongoose.Schema({
-    Institute : {
+    institute : {
         type:String,
         required: true,
     },
-    "Academic Program Name" : {
+    branch: {
         type: String,
         required: true
     },
-    Quota : {
+    quota: {
         type: String,
         required: true,
         enum : ['ALL', 'AI', 'OS', 'HS'],
         default: 'ALL'
     },
-    "Seat Type" : {
+    seatType: {
         type: String,
         required: true,
         enum: ['ALL', 'SC', 'ST (PwD)', 'SC (PwD)', 'OPEN', 'OBC-NCL (PwD)', 'EWS (PwD)', 'OPEN (PwD)', 'ST', 'EWS', 'OBC-NCL'],
         default: 'ALL'
     },
-    Gender : {
+    gender: {
         type: String,
     },
-    "Opening Rank" : {
+    or: {
         type: String,
         required: true
     },
-    "Closing Rank" : {
+    cr: {
         type: String,
         required: true
     },
@@ -36,11 +36,18 @@ const OrcrSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    year : {
+    year: {
         type: Number,
         required: true
-    }
-
+    },
+    branchCode: {
+        type: Number,
+        required: true
+    },
+    instituteCode: {
+        type: Number,
+        required: true
+    },
 })
 
 module.exports = mongoose.model('Orcr', OrcrSchema)
