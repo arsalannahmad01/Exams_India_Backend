@@ -2,8 +2,8 @@ const express = require('express')
 const router = express.Router()
 
 
-const {getOpeningClosingRanks} = require('../beans/orcr')
+const {getOpeningClosingRanks, populateSearch} = require('../beans/orcr')
 
-router.route('/get-orcr').get(getOpeningClosingRanks)
+router.route('/getOrcr').get(getOpeningClosingRanks)
 
 module.exports = router

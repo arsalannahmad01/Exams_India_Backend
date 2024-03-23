@@ -41,11 +41,11 @@ const OrcrSchema = new mongoose.Schema({
         required: true
     },
     branchCode: {
-        type: Number,
+        type: String,
         required: true
     },
     instituteCode: {
-        type: Number,
+        type: String,
         required: true
     },
 })

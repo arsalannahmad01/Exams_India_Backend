@@ -3,24 +3,14 @@ const { BadRequestError } = require('../errors')
 
 const getOpeningClosingRanks = async(req, res) => {
     try {
-        const { pageNumber = 1, pageSize = 50 } = req.query;
+        // const { pageNumber = 1, pageSize = 50 } = req.query; TODO: implement later
+        const { year, instituteCode } = req.query;
 
-        if (pageSize > 100) throw new BadRequestError("Page size can not exceed 100!");
+        // if (pageSize > 100) throw new BadRequestError("Page size can not exceed 100!");
+        if (!year && !instituteCode) new BadRequestError("Please select a year or an institute!");
 
         const matchQuery = buildAggregateQuery(req);
-        
-        const data = (await Orcr.aggregate([
-            { $match: matchQuery },
-            {
-                $facet: {
-                    orcr: [
-                        { $match: {  } },
-                        { $skip: (pageNumber - 1) * pageSize },
-                        { $limit: pageSize },
-                    ],
-                }
-            }
-        ]))[0];
+        const data = await Orcr.find(matchQuery);
     
         res.json({ success: true, message: "Opening closing ranks fetched successfully!", data });
     } catch (err) {
@@ -42,4 +32,6 @@ const buildAggregateQuery = (req) => {
     return matchQuery;
 }
 
-module.exports = {getOpeningClosingRanks}
+module.exports = {
+    getOpeningClosingRanks,
+}
