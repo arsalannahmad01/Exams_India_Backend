@@ -1,5 +1,5 @@
 const Orcr = require('../models/Orcr')
-const { BadRequestError } = require('../errors')
+const { BadRequestError, NotFoundError } = require('../errors')
 
 const getOpeningClosingRanks = async(req, res) => {
     try {
@@ -32,6 +32,36 @@ const buildAggregateQuery = (req) => {
     return matchQuery;
 }
 
+
+const getOptions = async(req, res) => {
+    
+    try {        
+        
+        const pipeline = buildPipeline(req)
+
+        const data = await Orcr.aggregate(pipeline)
+        if(!data) throw NotFoundError('Data not found')
+
+        res.json({ success: true, message: "Options fetched successfully!", data });
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+const buildPipeline = (req) => {
+
+    const { year, round, instituteType, instituteCode} = req.query;
+    let pipeline = []
+
+    if(year && round && instituteType && instituteCode) pipeline = [{$match: {year: parseInt(year), round: parseInt(round), instituteType, instituteCode}}, {$sort: {options: 1}}, {$group: {_id: {year:'$year', round: '$round', instituteType: '$instituteType', instituteCode: '$instituteCode'}, options: { $addToSet: { round: '$round', institute: '$institute', instituteType: '$instituteType', instituteCode: '$instituteCode', branch: "$branch" }}}}]
+    else if(year && round && instituteType) pipeline = [{$match: {year: parseInt(year), round: parseInt(round), instituteType}}, {$sort: {options: 1}}, {$group: {_id: {year:'$year', round: '$round', instituteType: '$instituteType'}, options: { $addToSet: { round: '$round', institute: '$institute', instituteType: '$instituteType', instituteCode: '$instituteCode', }}}}]
+    else if(year && round) pipeline = [{$match: { year: parseInt(year), round: parseInt(round)}}, {$sort: {options: 1}}, {$group: {_id: {year:'$year', round: '$round'}, options: { $addToSet: { round: '$round', instituteType: '$instituteType' }}}}]
+    else if(year) pipeline = [{$match: {year: parseInt(year)}}, {$sort: {options: 1}}, {$group: {_id: '$year', options: { $addToSet: { round: '$round'}}}}]
+
+    return pipeline;
+}
+
 module.exports = {
     getOpeningClosingRanks,
+    getOptions
 }
