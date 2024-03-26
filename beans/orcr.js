@@ -53,7 +53,7 @@ const buildPipeline = (req) => {
     const { year, round, instituteType, instituteCode} = req.query;
     let pipeline = []
 
-    if(year && round && instituteType && instituteCode) pipeline = [{$match: {year: parseInt(year), round: parseInt(round), instituteType, instituteCode}}, {$sort: {"branch": 1}}, {$group: {_id: {year:'$year', round: '$round', instituteType: '$instituteType', instituteCode: '$instituteCode'}, "branch": { $addToSet: { branch: "$branch", brachCode: "$branchCode" }}}}]
+    if(year && round && instituteType && instituteCode) pipeline = [{$match: {year: parseInt(year), round: parseInt(round), instituteType, instituteCode}}, {$sort: {"branch": 1}}, {$group: {_id: {year:'$year', round: '$round', instituteType: '$instituteType', instituteCode: '$instituteCode'}, "branch": { $addToSet: { branch: "$branch", branchCode: "$branchCode" }}}}]
     else if(year && round && instituteType) pipeline = [{$match: {year: parseInt(year), round: parseInt(round), instituteType}}, {$sort: {"institute": 1}}, {$group: {_id: {year:'$year', round: '$round', instituteType: '$instituteType'}, "institute": { $addToSet: { institute: '$institute', instituteCode: '$instituteCode', }}}}]
     else if(year && round) pipeline = [{$match: { year: parseInt(year), round: parseInt(round)}}, {$sort: {"instituteType": 1}}, {$group: {_id: {year:'$year', round: '$round'}, "instituteType": { $addToSet: '$instituteType' }}}]
     else if(year) pipeline = [{$match: {year: parseInt(year)}}, {$sort: {"round": 1}}, {$group: {_id: '$year', "round": { $addToSet: '$round'}}}]
