@@ -53,10 +53,10 @@ const buildPipeline = (req) => {
     const { year, round, instituteType, instituteCode} = req.query;
     let pipeline = []
 
-    if(year && round && instituteType && instituteCode) pipeline = [{$match: {year: parseInt(year), round: parseInt(round), instituteType, instituteCode}}, {$sort: {options: 1}}, {$group: {_id: {year:'$year', round: '$round', instituteType: '$instituteType', instituteCode: '$instituteCode'}, options: { $addToSet: { round: '$round', institute: '$institute', instituteType: '$instituteType', instituteCode: '$instituteCode', branch: "$branch" }}}}]
-    else if(year && round && instituteType) pipeline = [{$match: {year: parseInt(year), round: parseInt(round), instituteType}}, {$sort: {options: 1}}, {$group: {_id: {year:'$year', round: '$round', instituteType: '$instituteType'}, options: { $addToSet: { round: '$round', institute: '$institute', instituteType: '$instituteType', instituteCode: '$instituteCode', }}}}]
-    else if(year && round) pipeline = [{$match: { year: parseInt(year), round: parseInt(round)}}, {$sort: {options: 1}}, {$group: {_id: {year:'$year', round: '$round'}, options: { $addToSet: { round: '$round', instituteType: '$instituteType' }}}}]
-    else if(year) pipeline = [{$match: {year: parseInt(year)}}, {$sort: {options: 1}}, {$group: {_id: '$year', options: { $addToSet: { round: '$round'}}}}]
+    if(year && round && instituteType && instituteCode) pipeline = [{$match: {year: parseInt(year), round: parseInt(round), instituteType, instituteCode}}, {$sort: {options: 1}}, {$group: {_id: {year:'$year', round: '$round', instituteType: '$instituteType', instituteCode: '$instituteCode'}, "branch": { $addToSet: { branch: "$branch", brachCode: "$branchCode" }}}}]
+    else if(year && round && instituteType) pipeline = [{$match: {year: parseInt(year), round: parseInt(round), instituteType}}, {$sort: {options: 1}}, {$group: {_id: {year:'$year', round: '$round', instituteType: '$instituteType'}, "institute": { $addToSet: { institute: '$institute', instituteCode: '$instituteCode', }}}}]
+    else if(year && round) pipeline = [{$match: { year: parseInt(year), round: parseInt(round)}}, {$sort: {options: 1}}, {$group: {_id: {year:'$year', round: '$round'}, "instituteType": { $addToSet: '$instituteType' }}}]
+    else if(year) pipeline = [{$match: {year: parseInt(year)}}, {$sort: {options: 1}}, {$group: {_id: '$year', "round": { $addToSet: '$round'}}}]
 
     return pipeline;
 }
